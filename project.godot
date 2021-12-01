@@ -10,12 +10,11 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
-config/name="YOUR_PROJECT_NAME_HERE"
+config/name="Wizard Arena"
 config/icon="res://icon.png"
 
 [editor_plugins]
