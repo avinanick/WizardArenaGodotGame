@@ -13,4 +13,8 @@ public class StateMachine : Node
         base._Ready();
         CurrentState = GetNode<State>(InitialState);
     }
+
+    public void SetState(State newState) {
+        CurrentState = newState;
+    }
 }
