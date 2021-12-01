@@ -9,6 +9,7 @@ public class State : Node
     public override void _Ready()
     {
         base._Ready();
+        CallDeferred(nameof(Setup));
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,5 +36,9 @@ public class State : Node
 
     public void UnhandledInput(InputEvent @event) {
         
+    }
+
+    private void Setup() {
+        _Parent = GetParent() as State;
     }
 }
