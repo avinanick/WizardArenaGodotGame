@@ -7,7 +7,12 @@ public class State : Node
     private State _Parent = null;
 
     private StateMachine _GetStateMachine(Node node) {
-        return null;
+        // This function will cause a crash if there is no state machine
+        // in the heirarchy above the calling state
+        if(node is StateMachine machine) {
+            return machine;
+        }
+        return _GetStateMachine(node.GetParent());
     }
 
     // Called when the node enters the scene tree for the first time.
@@ -15,7 +20,11 @@ public class State : Node
     {
         base._Ready();
         CallDeferred(nameof(Setup));
-        CallDeferred(nameof(_GetStateMachine), this);
+        CallDeferred(nameof(AssignStateMachine));
+    }
+
+    private void AssignStateMachine() {
+        _StateMachine = _GetStateMachine(this);
     }
 
     public void Enter(Godot.Collections.Dictionary message) {
