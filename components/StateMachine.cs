@@ -37,6 +37,12 @@ public class StateMachine : Node
     }
 
     public void TransitionTo(string targetStatePath, Godot.Collections.Dictionary message) {
-        return;
+        if(!HasNode(targetStatePath)) {
+            return;
+        }
+        State targetState = GetNode<State>(targetStatePath);
+        CurrentState.Exit();
+        CurrentState = targetState;
+        CurrentState.Enter(message);
     }
 }
