@@ -12,12 +12,6 @@ public class State : Node
         CallDeferred(nameof(Setup));
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-
     public void Enter(Godot.Collections.Dictionary message) {
     }
 
