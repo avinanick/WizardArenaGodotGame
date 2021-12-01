@@ -27,6 +27,7 @@ public class StateMachine : Node
     {
         base._Ready();
         CurrentState = GetNode<State>(InitialState);
+        CallDeferred(nameof(Setup));
     }
 
     public override void _UnhandledInput(InputEvent @event)
@@ -37,6 +38,10 @@ public class StateMachine : Node
 
     public void SetState(State newState) {
         CurrentState = newState;
+    }
+
+    private void Setup() {
+        CurrentState.Enter(new Godot.Collections.Dictionary());
     }
 
     public void TransitionTo(string targetStatePath, Godot.Collections.Dictionary message) {
