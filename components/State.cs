@@ -3,9 +3,7 @@ using System;
 
 public class State : Node
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+    private State _Parent = null;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -18,6 +16,14 @@ public class State : Node
 //  {
 //      
 //  }
+
+    public void Enter(Godot.Collections.Dictionary message) {
+
+    }
+
+    public void Exit() {
+
+    }
 
     public void PhysicsProcess(float delta) {
 
