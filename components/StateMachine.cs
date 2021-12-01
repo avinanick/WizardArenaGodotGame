@@ -3,6 +3,9 @@ using System;
 
 public class StateMachine : Node
 {
+    [Signal]
+    public delegate void Transitioned(string statePath);
+
     [Export]
     private NodePath InitialState;
     private State CurrentState = null;
@@ -44,5 +47,6 @@ public class StateMachine : Node
         CurrentState.Exit();
         CurrentState = targetState;
         CurrentState.Enter(message);
+        EmitSignal(nameof(Transitioned), targetStatePath);
     }
 }
