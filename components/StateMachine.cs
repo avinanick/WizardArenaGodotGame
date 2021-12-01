@@ -35,4 +35,8 @@ public class StateMachine : Node
     public void SetState(State newState) {
         CurrentState = newState;
     }
+
+    public void TransitionTo(string targetStatePath, Godot.Collections.Dictionary message) {
+        return;
+    }
 }
