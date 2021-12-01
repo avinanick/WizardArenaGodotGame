@@ -19,23 +19,18 @@ public class State : Node
 //  }
 
     public void Enter(Godot.Collections.Dictionary message) {
-
     }
 
     public void Exit() {
-
     }
 
     public void PhysicsProcess(float delta) {
-
     }
 
     public void Process(float delta) {
-        
     }
 
     public void UnhandledInput(InputEvent @event) {
-        
     }
 
     private void Setup() {
