@@ -17,5 +17,6 @@ shape = SubResource( 1 )
 [node name="CasualTallMale" parent="." instance=ExtResource( 1 )]
 
 [node name="StateMachine" parent="." instance=ExtResource( 3 )]
+InitialState = NodePath("Move")
 
 [node name="Move" parent="StateMachine" instance=ExtResource( 2 )]
