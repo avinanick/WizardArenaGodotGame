@@ -12,4 +12,14 @@ public class PlayerMoveState : PlayerState
     {
         base._Ready();
     }
+
+    private static Vector3 GetInputDirection() {
+        return new Vector3();
+    }
+
+    public override void PhysicsProcess(float delta)
+    {
+        base.PhysicsProcess(delta);
+        Vector3 inputDirection = GetInputDirection();
+    }
 }
