@@ -3,8 +3,8 @@ using System;
 
 public class State : Node
 {
-    private StateMachine _StateMachine = null;
-    private State _Parent = null;
+    protected StateMachine _StateMachine = null;
+    protected State _Parent = null;
 
     private StateMachine _GetStateMachine(Node node) {
         // This function will cause a crash if there is no state machine
