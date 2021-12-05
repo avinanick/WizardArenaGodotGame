@@ -27,7 +27,11 @@ public class PlayerMoveState : PlayerState
     }
 
     private static Vector3 GetInputDirection() {
-        return Vector3.Zero;
+        return new Vector3(
+            Input.GetActionRawStrength("move_right") - Input.GetActionStrength("move_left"),
+            0,
+            Input.GetActionStrength("move_back") - Input.GetActionStrength("move_forward")
+        );
     }
 
     public override void PhysicsProcess(float delta)
