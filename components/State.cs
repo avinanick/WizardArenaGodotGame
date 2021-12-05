@@ -39,7 +39,7 @@ public class State : Node
     public void Process(float delta) {
     }
 
-    private void Setup() {
+    protected virtual void Setup() {
         _Parent = GetParent() as State;
     }
 
