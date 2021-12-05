@@ -33,16 +33,16 @@ public class State : Node
     public void Exit() {
     }
 
-    public void PhysicsProcess(float delta) {
+    public virtual void PhysicsProcess(float delta) {
     }
 
-    public void Process(float delta) {
+    public virtual void Process(float delta) {
     }
 
     protected virtual void Setup() {
         _Parent = GetParent() as State;
     }
 
-    public void UnhandledInput(InputEvent @event) {
+    public virtual void UnhandledInput(InputEvent @event) {
     }
 }
