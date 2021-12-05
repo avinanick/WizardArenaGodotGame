@@ -9,7 +9,7 @@ public class PlayerMoveState : PlayerState
     [Export]
     private float MaxSpeed = 50.0f;
     [Export]
-    private float MoveSpeed = 50f;
+    private float MoveSpeed = 10f;
     [Export]
     private float Gravity = -80f;
     [Export]
@@ -22,8 +22,13 @@ public class PlayerMoveState : PlayerState
         base._Ready();
     }
 
-    private Vector3 CalculateVelocity() {
-        return Vector3.Zero;
+    private Vector3 CalculateVelocity(Vector3 velocityCurrent, Vector3 moveDirection, float delta) {
+        Vector3 velocityNew = moveDirection * MoveSpeed;
+        if(velocityNew.Length() > MaxSpeed) {
+            velocityNew = velocityNew.Normalized() * MaxSpeed;
+        }
+        velocityNew.y = velocityCurrent.y + (Gravity * delta);
+        return velocityNew;
     }
 
     private static Vector3 GetInputDirection() {
@@ -46,7 +51,7 @@ public class PlayerMoveState : PlayerState
         if(moveDirection.Length() > 0.001) {
             PlayerOwner.LookAt(PlayerOwner.GlobalTransform.origin + moveDirection, Vector3.Up);
         }
-        Velocity = CalculateVelocity();
+        Velocity = CalculateVelocity(Velocity, moveDirection, delta);
         Velocity = PlayerOwner.MoveAndSlide(Velocity, Vector3.Up);
     }
 }
