@@ -31,7 +31,7 @@ extents = Vector3( 2.5, 2.5, 2.5 )
 [node name="CasualTallMale" parent="." instance=ExtResource( 1 )]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80536, 4.95547 )
+transform = Transform( 1, 0, 0, 0, 0.77148, 0.636253, 0, -0.636253, 0.77148, 0, 9.6727, 8.32858 )
 
 [node name="Ground" type="StaticBody" parent="."]
 collision_layer = 2
