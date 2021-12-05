@@ -13,4 +13,8 @@ public class Player : KinematicBody
         Skin = GetNode<PlayerModel>("PlayerModel");
         Machine = GetNode<StateMachine>("StateMachine");
     }
+
+    public PlayerModel GetSkin() {
+        return Skin;
+    }
 }
