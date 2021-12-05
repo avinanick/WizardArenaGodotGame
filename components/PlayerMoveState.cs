@@ -6,6 +6,14 @@ public class PlayerMoveState : PlayerState
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
+    [Export]
+    private float MaxSpeed = 50.0f;
+    [Export]
+    private float MoveSpeed = 50f;
+    [Export]
+    private float Gravity = -80f;
+    [Export]
+    private float JumpImpulse = 25;
     private Vector3 Velocity = Vector3.Zero;
 
     // Called when the node enters the scene tree for the first time.
