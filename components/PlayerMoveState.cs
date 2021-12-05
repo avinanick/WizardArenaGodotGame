@@ -31,6 +31,10 @@ public class PlayerMoveState : PlayerState
             moveDirection = moveDirection.Normalized();
         }
         moveDirection.y = 0;
+        if(moveDirection.Length() > 0.001) {
+            PlayerOwner.LookAt(PlayerOwner.GlobalTransform.origin + moveDirection, Vector3.Up);
+        }
         Velocity = CalculateVelocity();
+        Velocity = PlayerOwner.MoveAndSlide(Velocity, Vector3.Up);
     }
 }
