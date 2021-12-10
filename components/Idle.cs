@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public class Idle : PlayerState
@@ -11,5 +12,30 @@ public class Idle : PlayerState
     public override void _Ready()
     {
         base._Ready();
+    }
+
+    public override void Enter(Dictionary message)
+    {
+        base.Enter(message);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void PhysicsProcess(float delta)
+    {
+        base.PhysicsProcess(delta);
+    }
+
+    public override void Process(float delta)
+    {
+        base.Process(delta);
+    }
+
+    public override void UnhandledInput(InputEvent @event)
+    {
+        base.UnhandledInput(@event);
     }
 }
