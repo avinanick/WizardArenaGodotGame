@@ -27,10 +27,10 @@ public class State : Node
         _StateMachine = _GetStateMachine(this);
     }
 
-    public void Enter(Godot.Collections.Dictionary message) {
+    public virtual void Enter(Godot.Collections.Dictionary message) {
     }
 
-    public void Exit() {
+    public virtual void Exit() {
     }
 
     public virtual void PhysicsProcess(float delta) {
