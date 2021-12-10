@@ -19,6 +19,7 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.5,
 shape = SubResource( 1 )
 
 [node name="PlayerModel" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="StateMachine" parent="." instance=ExtResource( 3 )]
 InitialState = NodePath("Move")
