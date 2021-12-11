@@ -6,7 +6,7 @@ public class PlayerModel : Spatial
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-    private enum States {
+    public enum States {
         Idle,
         Run,
         Air
@@ -23,8 +23,8 @@ public class PlayerModel : Spatial
         Playback = (AnimationNodeStateMachinePlayback)Animator.Get("parameters/playback");
     }
 
-    public void TransitionTo(int stateID) {
-        switch((States)stateID) {
+    public void TransitionTo(States stateID) {
+        switch(stateID) {
             case States.Idle:
                 Playback.Travel("Idle");
                 break;
