@@ -1446,6 +1446,7 @@ tracks/44/keys = PoolRealArray( 0, 1, 0, 0, 0, 3.10958e-23, 7.27596e-12, 8.94484
 [sub_resource type="Animation" id=8]
 resource_name = "Run"
 length = 0.666667
+loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Root/Skeleton:LeftFootIK")
 tracks/0/interp = 1
