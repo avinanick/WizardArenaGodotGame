@@ -24,7 +24,7 @@ shape = SubResource( 1 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="StateMachine" parent="." instance=ExtResource( 3 )]
-InitialState = NodePath("Move")
+InitialState = NodePath("Move/Idle")
 
 [node name="Move" parent="StateMachine" instance=ExtResource( 2 )]
 script = ExtResource( 5 )
