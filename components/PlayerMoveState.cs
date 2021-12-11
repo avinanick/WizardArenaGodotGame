@@ -14,7 +14,7 @@ public class PlayerMoveState : PlayerState
     private float Gravity = -80f;
     [Export]
     private float JumpImpulse = 25;
-    private Vector3 Velocity = Vector3.Zero;
+    public Vector3 Velocity = Vector3.Zero;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
