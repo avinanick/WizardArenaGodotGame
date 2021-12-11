@@ -16,6 +16,10 @@ public class Idle : PlayerState
 
     public override void Enter(Dictionary message)
     {
+        if(_Parent is PlayerMoveState moveState) {
+            moveState.Velocity = Vector3.Zero;
+        }
+        PlayerSkin.TransitionTo(PlayerModel.States.Idle);
         base.Enter(message);
     }
 
