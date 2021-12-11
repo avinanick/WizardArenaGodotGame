@@ -27,6 +27,11 @@ public class Idle : PlayerState
     public override void PhysicsProcess(float delta)
     {
         base.PhysicsProcess(delta);
+        if(_Parent is PlayerMoveState moveState) {
+            if(moveState.Velocity.Length() > 0.01 & PlayerOwner.IsOnFloor()) {
+                _StateMachine.TransitionTo("Move/Run", new Godot.Collections.Dictionary());
+            }
+        }
     }
 
     public override void UnhandledInput(InputEvent @event)
