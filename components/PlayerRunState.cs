@@ -17,6 +17,7 @@ public class PlayerRunState : PlayerState
     public override void Enter(Dictionary message)
     {
         base.Enter(message);
+        PlayerSkin.TransitionTo(PlayerModel.States.Run);
     }
 
     public override void Exit()
