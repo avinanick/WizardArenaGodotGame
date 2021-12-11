@@ -27,5 +27,10 @@ public class PlayerRunState : PlayerState
     public override void PhysicsProcess(float delta)
     {
         base.PhysicsProcess(delta);
+        if(_Parent is PlayerMoveState moveState) {
+            if(moveState.Velocity.Length() < 0.01) {
+                _StateMachine.TransitionTo("Move/Idle", new Godot.Collections.Dictionary());
+            }
+        }
     }
 }
