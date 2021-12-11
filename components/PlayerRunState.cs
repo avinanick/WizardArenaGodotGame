@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public class PlayerRunState : PlayerState
@@ -11,5 +12,20 @@ public class PlayerRunState : PlayerState
     public override void _Ready()
     {
         base._Ready();
+    }
+
+    public override void Enter(Dictionary message)
+    {
+        base.Enter(message);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void PhysicsProcess(float delta)
+    {
+        base.PhysicsProcess(delta);
     }
 }
