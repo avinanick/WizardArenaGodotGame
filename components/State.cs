@@ -28,15 +28,27 @@ public class State : Node
     }
 
     public virtual void Enter(Godot.Collections.Dictionary message) {
+        if(_Parent != null) {
+            _Parent.Enter(message);
+        }
     }
 
     public virtual void Exit() {
+        if(_Parent != null) {
+            _Parent.Exit();
+        }
     }
 
     public virtual void PhysicsProcess(float delta) {
+        if(_Parent != null) {
+            _Parent.PhysicsProcess(delta);
+        }
     }
 
     public virtual void Process(float delta) {
+        if(_Parent != null) {
+            _Parent.Process(delta);
+        }
     }
 
     protected virtual void Setup() {
