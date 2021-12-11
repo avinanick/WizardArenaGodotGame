@@ -29,11 +29,6 @@ public class Idle : PlayerState
         base.PhysicsProcess(delta);
     }
 
-    public override void Process(float delta)
-    {
-        base.Process(delta);
-    }
-
     public override void UnhandledInput(InputEvent @event)
     {
         base.UnhandledInput(@event);
