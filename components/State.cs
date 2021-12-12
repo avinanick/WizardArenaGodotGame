@@ -3,8 +3,8 @@ using System;
 
 public class State : Node
 {
-    private StateMachine _StateMachine = null;
-    private State _Parent = null;
+    protected StateMachine _StateMachine = null;
+    protected State _Parent = null;
 
     private StateMachine _GetStateMachine(Node node) {
         // This function will cause a crash if there is no state machine
@@ -27,22 +27,34 @@ public class State : Node
         _StateMachine = _GetStateMachine(this);
     }
 
-    public void Enter(Godot.Collections.Dictionary message) {
+    public virtual void Enter(Godot.Collections.Dictionary message) {
+        if(_Parent != null) {
+            _Parent.Enter(message);
+        }
     }
 
-    public void Exit() {
+    public virtual void Exit() {
+        if(_Parent != null) {
+            _Parent.Exit();
+        }
     }
 
-    public void PhysicsProcess(float delta) {
+    public virtual void PhysicsProcess(float delta) {
+        if(_Parent != null) {
+            _Parent.PhysicsProcess(delta);
+        }
     }
 
-    public void Process(float delta) {
+    public virtual void Process(float delta) {
+        if(_Parent != null) {
+            _Parent.Process(delta);
+        }
     }
 
-    private void Setup() {
+    protected virtual void Setup() {
         _Parent = GetParent() as State;
     }
 
-    public void UnhandledInput(InputEvent @event) {
+    public virtual void UnhandledInput(InputEvent @event) {
     }
 }
