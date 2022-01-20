@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CapsuleShape" id=2]
+height = 0.5
+
+[node name="CameraRig" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.71046, 2.28859 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.565975, 0.824423, 0, -0.824423, 0.565975, 0, 0, 0 )
+current = true
+target = NodePath("../SpringArm/Position3D")
+speed = 7.0
+enabled = true
+
+[node name="SpringArm" type="SpringArm" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.523837, 0.851818, 0, -0.851818, 0.523837, 0, 0, 0 )
+collision_mask = 2
+shape = SubResource( 2 )
+spring_length = 5.0
+
+[node name="Position3D" type="Position3D" parent="SpringArm"]
