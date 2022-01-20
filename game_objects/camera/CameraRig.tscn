@@ -4,7 +4,6 @@
 height = 0.5
 
 [node name="CameraRig" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.71046, 2.28859 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.565975, 0.824423, 0, -0.824423, 0.565975, 0, 0, 0 )
