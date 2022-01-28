@@ -26,5 +26,6 @@ spring_length = 5.0
 [node name="Position3D" type="Position3D" parent="SpringArm"]
 
 [node name="StateMachine" parent="." instance=ExtResource( 3 )]
+InitialState = NodePath("CameraState")
 
 [node name="CameraState" parent="StateMachine" instance=ExtResource( 2 )]
