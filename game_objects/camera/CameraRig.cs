@@ -13,7 +13,8 @@ public class CameraRig : Spatial
     public override void _Ready()
     {
         SetAsToplevel(true);
-        CallDeferred(nameof(SetPlayerOwner));        
+        CallDeferred(nameof(SetPlayerOwner));  
+        PositionStart = this.Transform.origin;      
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,6 +25,10 @@ public class CameraRig : Spatial
 
     public Player GetPlayerOwner() {
         return PlayerOwner;
+    }
+
+    public Vector3 GetStartingPosition() {
+        return PositionStart;
     }
 
     private void SetPlayerOwner() {
