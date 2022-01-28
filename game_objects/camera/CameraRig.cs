@@ -22,6 +22,10 @@ public class CameraRig : Spatial
 //      
 //  }
 
+    public Player GetPlayerOwner() {
+        return PlayerOwner;
+    }
+
     private void SetPlayerOwner() {
         PlayerOwner = (Player)Owner;
     }
