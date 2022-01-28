@@ -13,8 +13,8 @@ public class CameraRig : Spatial
     public override void _Ready()
     {
         SetAsToplevel(true);
-        CallDeferred(nameof(SetPlayerOwner));  
-        PositionStart = this.Transform.origin;      
+        CallDeferred(nameof(SetPlayerOwner));
+        PositionStart = this.Transform.origin;
     }
 
     public Player GetPlayerOwner() {
