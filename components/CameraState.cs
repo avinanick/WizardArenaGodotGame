@@ -14,12 +14,6 @@ public class CameraState : State
         base._Ready();
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-
     public override void Process(float delta) {
         Transform moveTransform = Rig.GlobalTransform;
         moveTransform.origin = Rig.GetPlayerOwner().GlobalTransform.origin + Rig.GetStartingPosition();

@@ -17,12 +17,6 @@ public class CameraRig : Spatial
         PositionStart = this.Transform.origin;      
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-
     public Player GetPlayerOwner() {
         return PlayerOwner;
     }
