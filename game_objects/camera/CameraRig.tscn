@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://game_objects/camera/CameraRig.cs" type="Script" id=1]
 [ext_resource path="res://components/State.tscn" type="PackedScene" id=2]
 [ext_resource path="res://components/StateMachine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://components/CameraState.cs" type="Script" id=4]
 
 [sub_resource type="CapsuleShape" id=2]
 height = 0.5
@@ -29,3 +30,4 @@ spring_length = 5.0
 InitialState = NodePath("CameraState")
 
 [node name="CameraState" parent="StateMachine" instance=ExtResource( 2 )]
+script = ExtResource( 4 )
