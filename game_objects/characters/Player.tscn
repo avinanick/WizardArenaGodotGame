@@ -18,6 +18,7 @@ collision_mask = 2
 script = ExtResource( 4 )
 
 [node name="CameraRig" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.08076, 3.80452 )
 
 [node name="PlayerModel" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
