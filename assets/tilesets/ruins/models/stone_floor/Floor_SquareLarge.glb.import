@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Curve_1.fbx-a53d6e0db15c72a46dc4b3e94078e123.scn"
+path="res://.import/Floor_SquareLarge.glb-2dbe55e8afb2a46e95c294e05a9e0d9f.scn"
 
 [deps]
 
-source_file="res://assets/tilesets/ruins/models/stone_wall_curve/Curve_1.fbx"
-dest_files=[ "res://.import/Curve_1.fbx-a53d6e0db15c72a46dc4b3e94078e123.scn" ]
+source_file="res://assets/tilesets/ruins/models/stone_floor/Floor_SquareLarge.glb"
+dest_files=[ "res://.import/Floor_SquareLarge.glb-2dbe55e8afb2a46e95c294e05a9e0d9f.scn" ]
 
 [params]
 
