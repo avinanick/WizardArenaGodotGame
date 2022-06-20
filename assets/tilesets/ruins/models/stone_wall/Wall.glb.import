@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Wall.fbx-bac179dabb21710052ed857dc4d960cc.scn"
+path="res://.import/Wall.glb-b634e36260cb87e1f12cae595aaa3f3f.scn"
 
 [deps]
 
-source_file="res://assets/tilesets/ruins/models/stone_wall/Wall.fbx"
-dest_files=[ "res://.import/Wall.fbx-bac179dabb21710052ed857dc4d960cc.scn" ]
+source_file="res://assets/tilesets/ruins/models/stone_wall/Wall.glb"
+dest_files=[ "res://.import/Wall.glb-b634e36260cb87e1f12cae595aaa3f3f.scn" ]
 
 [params]
 

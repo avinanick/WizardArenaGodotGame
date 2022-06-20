@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Column_Round_Short.fbx-218bb6d7b999f0142e7a8ae2a4ebe9c8.scn"
+path="res://.import/Column_Round_Short.glb-0b15b6421514065c6a8dc07e4ae71b57.scn"
 
 [deps]
 
-source_file="res://assets/tilesets/ruins/models/column/Column_Round_Short.fbx"
-dest_files=[ "res://.import/Column_Round_Short.fbx-218bb6d7b999f0142e7a8ae2a4ebe9c8.scn" ]
+source_file="res://assets/tilesets/ruins/models/column/Column_Round_Short.glb"
+dest_files=[ "res://.import/Column_Round_Short.glb-0b15b6421514065c6a8dc07e4ae71b57.scn" ]
 
 [params]
 
