@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class ComponentSystem : Node
 {
     
-    private Dictionary<int, Component> SystemComponents = new Dictionary<int, Component>();
+    protected Dictionary<int, Component> SystemComponents = new Dictionary<int, Component>();
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -20,6 +20,6 @@ public class ComponentSystem : Node
 //  }
 
     public virtual void RegisterComponent(Component newComponent, int entityID) {
-        
+        SystemComponents.Add(entityID, newComponent);
     }
 }
