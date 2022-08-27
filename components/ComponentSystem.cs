@@ -19,6 +19,13 @@ public class ComponentSystem : Node
 //      
 //  }
 
+    public virtual Component FindComponent(int entityID) {
+        if(SystemComponents.ContainsKey(entityID)) {
+            return SystemComponents[entityID];
+        }
+        return null;
+    }
+
     public virtual void RegisterComponent(Component newComponent, int entityID) {
         SystemComponents.Add(entityID, newComponent);
     }
