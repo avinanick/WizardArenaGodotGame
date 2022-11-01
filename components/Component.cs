@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Component : Node
+public abstract class Component : Node
 {
     private int EntityID;
     private ComponentSystem ComponentControl;
@@ -9,14 +9,14 @@ public class Component : Node
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        base._Ready();
     }
 
     private virtual string ComponentString() {
         return "Component: component, Entity: " + EntityID;
     }
 
-    private void RegisterToSystem() {
+    private virtual void RegisterToSystem() {
         if(ComponentControl) {
             ComponentControl.RegisterComponent(EntityID, this);
         } else {
