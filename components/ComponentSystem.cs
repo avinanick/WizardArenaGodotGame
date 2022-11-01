@@ -12,7 +12,7 @@ public class ComponentSystem : Node
         
     }
 
-    public void RegisterComponent(int entityID) {
+    public void RegisterComponent(int entityID, Component newComponent) {
 
     }
 }
