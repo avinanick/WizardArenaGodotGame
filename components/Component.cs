@@ -10,6 +10,7 @@ public abstract class Component : Node
     public override void _Ready()
     {
         base._Ready();
+        CallDeferred("RegisterToSystem");
     }
 
     private virtual string ComponentString() {
@@ -17,6 +18,7 @@ public abstract class Component : Node
     }
 
     private virtual void RegisterToSystem() {
+        SetEntityID();
         if(ComponentControl) {
             ComponentControl.RegisterComponent(EntityID, this);
         } else {
@@ -26,6 +28,6 @@ public abstract class Component : Node
     }
 
     private void SetEntityID() {
-
+        EntityID = GetParent<Entity>().GetID();
     }
 }
