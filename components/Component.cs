@@ -4,7 +4,7 @@ using System;
 public abstract class Component : Node
 {
     private int EntityID;
-    private ComponentSystem ComponentControl;
+    protected ComponentSystem ComponentControl;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -12,7 +12,7 @@ public abstract class Component : Node
         base._Ready();
     }
 
-    private virtual string ComponentString() {
+    protected virtual string ComponentString() {
         return "Component: component, Entity: " + EntityID;
     }
 
