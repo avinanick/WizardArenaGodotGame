@@ -4,7 +4,7 @@ using System;
 public abstract class Component : Node
 {
     private int EntityID;
-    protected ComponentSystem ComponentControl;
+    protected ComponentSystem ComponentControl = null;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -18,7 +18,7 @@ public abstract class Component : Node
 
     public virtual void RegisterToSystem() {
         SetEntityID();
-        if(ComponentControl) {
+        if(ComponentControl != null) {
             ComponentControl.RegisterComponent(EntityID, this);
         } else {
             // Print some sort of error
