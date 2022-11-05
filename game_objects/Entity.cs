@@ -8,7 +8,8 @@ public class Entity : KinematicBody
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        base._Ready();
+        CallDeferred("SetID");
     }
 
     public int GetID() {
@@ -16,6 +17,6 @@ public class Entity : KinematicBody
     }
 
     private void SetID() {
-
+        EntityID = GetNode<EntitySystem>("/root/EntitySystem").AssignID();
     }
 }
