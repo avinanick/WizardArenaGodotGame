@@ -10,14 +10,13 @@ public abstract class Component : Node
     public override void _Ready()
     {
         base._Ready();
-        CallDeferred("RegisterToSystem");
     }
 
     private virtual string ComponentString() {
         return "Component: component, Entity: " + EntityID;
     }
 
-    private virtual void RegisterToSystem() {
+    public virtual void RegisterToSystem() {
         SetEntityID();
         if(ComponentControl) {
             ComponentControl.RegisterComponent(EntityID, this);
