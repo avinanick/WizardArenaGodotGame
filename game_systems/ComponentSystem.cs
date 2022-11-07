@@ -26,6 +26,8 @@ public class ComponentSystem : Node
     }
 
     public virtual void RegisterComponent(int entityID, Component newComponent) {
+        // NOTE: Current implimentation does not allow for more than
+        // one component of the same type on an entity.
         SystemComponents.Add(entityID, newComponent);
     }
 }
