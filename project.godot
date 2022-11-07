@@ -13,6 +13,11 @@ config_version=4
 config/name="Wizard Arena"
 config/icon="res://icon.png"
 
+[autoload]
+
+TestComponentSystem="*res://test/TestComponentSystem.tscn"
+EntitySystem="*res://game_systems/EntitySystem.tscn"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "gut" )
