@@ -18,9 +18,12 @@ public class Entity : KinematicBody
 
     private void SetID() {
         EntityID = GetNode<EntitySystem>("/root/EntitySystem").AssignID();
-        Godot.Collections.Array<Component> components = GetChildren<Component>();
-        foreach (Component childComponent in components) {
-            childComponent.RegisterToSystem();
+        // This doesn't work, will need a different way to get component children.
+        Godot.Collections.Array children = GetChildren();
+        foreach (Node child in children) {
+            if(child is Component childComponent) {
+                childComponent.RegisterToSystem();
+            }
         }
     }
 }
